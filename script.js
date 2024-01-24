@@ -1,12 +1,12 @@
 function firstWord(s) {
   // your code here
-	if (!s || !s.includes(' ')) 
-  {
-    return s;
-  }
-  
-  const index = s.indexOf(' ');
-  return s.substring(0, index);
+	let str ='';
+	let idx=0;
+	while (idx < s.length && s[idx] !==' ') {
+		str+=s[idx];
+		idx++;
+	}
+	return str;
 }
 
 // Do not change the code below
