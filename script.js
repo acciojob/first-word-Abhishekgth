@@ -1,12 +1,20 @@
 function firstWord(s) {
   // your code here
-	let str ='';
-	let idx=0;
-	while (idx < s.length && s[idx] !==' ') {
-		str+=s[idx];
-		idx++;
-	}
-	return str;
+	 if (s === null) {
+    return s;
+  }
+
+  const arr = [];
+  arr.push(s.charAt(0));
+
+  for (let i = 1; i < s.length; i++) {
+    if (s.charAt(i) === " ") {
+      return arr.join("").trim();
+    }
+    arr.push(s.charAt(i));
+  }
+
+  return arr.join("").trim();
 }
 
 // Do not change the code below
